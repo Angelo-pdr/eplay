@@ -19,12 +19,16 @@ const GlobalCss = createGlobalStyle`
   body{
     background-color: ${cores.branca};
   }
+  .con
+  tainer{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+  }
 `
 
 export const Container = styled.div`
-  max-width: 1024px;
-  width: 100%;
-  margin: 0 auto;
+
 `
 
 export default GlobalCss
