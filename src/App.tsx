@@ -14,8 +14,8 @@ function App() {
       <div className='container'>
         <Header/>
       </div>
-      <Footer />
       <Rotas />
+      <Footer />
     </BrowserRouter>
   )
 }
