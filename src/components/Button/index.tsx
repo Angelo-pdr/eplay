@@ -7,12 +7,13 @@ export type Props = {
   to?: string
   onclick?: () => void
   children: string
+  variant?: 'primary' | 'secondary'
 }
 
-const Tag = ({ type, title, to, children, onclick }: Props) => {
+const Tag = ({ type, title, to, children, onclick, variant = 'primary' }: Props) => {
   if (type == 'button') {
     return (
-      <ButtonContainer type="button" title={title} onClick={onclick}>
+      <ButtonContainer variant={variant} type="button" title={title} onClick={onclick}>
         {children}
       </ButtonContainer>
     )

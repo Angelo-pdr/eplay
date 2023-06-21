@@ -1,5 +1,4 @@
 import React from 'react'
-import Banner from '../../components/Banner'
 import ProductList from '../../components/ProductsList'
 import Game from '../../models/Game'
 
@@ -8,7 +7,6 @@ import fifa_23 from '../../asserts/images/fifa_23.png'
 import star_wars from '../../asserts/images/star_wars.png'
 import zelda from '../../asserts/images/zelda.png'
 import diablo from '../../asserts/images/diablo.png'
-import street_fighter_6 from '../../asserts/images/street _fighter_6.png'
 
 const rpg: Game[] = [
   {
