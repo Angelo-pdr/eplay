@@ -4,7 +4,8 @@ export const cores = {
   branca: '#eee',
   preta: '#111',
   cinza: '#333',
-  verde: '#10ac84'
+  verde: '#10ac84',
+  cinzaClaro: '#a3a3a3'
 }
 
 const GlobalCss = createGlobalStyle`
@@ -13,22 +14,22 @@ const GlobalCss = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
-    list-styles: none;
+    list-style-type: none;
   }
 
   body{
-    background-color: ${cores.branca};
+    background-color: ${cores.preta};
+    color: ${cores.branca};
+    padding-top: 40px;
   }
-  .con
-  tainer{
+  
+  .container{
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
   }
 `
 
-export const Container = styled.div`
-
-`
+export const Container = styled.div``
 
 export default GlobalCss

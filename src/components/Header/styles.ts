@@ -1,22 +1,22 @@
-import styled from "styled-components";
-import { cores } from "../../styles";
+import styled from 'styled-components'
+import { cores } from '../../styles'
 
 export const HeaderBar = styled.header`
   background-color: ${cores.cinza};
-  padding:24px;
+  padding: 24px;
   border-radius: 1rem;
   margin-bottom: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  a{
+  a {
     color: ${cores.branca};
     text-decoration: none;
     font-weight: bold;
   }
 
-  div{
+  div {
     display: flex;
     align-items: center;
   }
@@ -37,7 +37,7 @@ export const LinkICart = styled.a`
   display: flex;
   align-items: center;
 
-  img{
+  img {
     margin-left: 1rem;
   }
 `

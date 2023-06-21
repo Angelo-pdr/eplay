@@ -1,11 +1,12 @@
-import { HeaderBar, LinkICart, LinkItem, Links } from "./styles";
-import logo from "../../asserts/images/logo.svg"
-import carrinho from "../../asserts/images/carrinho.svg"
+import React from 'react'
+import { HeaderBar, LinkICart, LinkItem, Links } from './styles'
+import logo from '../../asserts/images/logo.svg'
+import carrinho from '../../asserts/images/carrinho.svg'
 
 const Header = () => (
   <HeaderBar>
-    <img src={logo} alt="EPLAY" />
     <div>
+    <img src={logo} alt="EPLAY" />
       <nav>
         <Links>
           <LinkItem>
