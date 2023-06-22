@@ -1,8 +1,9 @@
 import React from 'react'
 import Hero from '../../components/Hero'
 
-import fundo_hogwarts from '../../asserts/images/fundo_hogwarts.png'
+import diablo from '../../asserts/images/diablo.png'
 import Section from '../../components/Section'
+import Gallery from '../../components/Gallery'
 
 const Product = () => (
   <>
@@ -31,18 +32,7 @@ const Product = () => (
 
       </p>
     </Section>
-    <Section title='Galeria' background='black' >
-      <p>
-        <b>Plataforma</b>: PlayStation 5 <br/>
-        <b>Desenvolvedor</b>: Avalanche Software <br/>
-        <b>Editora:</b> Portkey Games, subsidiária da Warner Bros. Interactive Entertainment
-        <br/>
-        <b>Idiomas</b>: O jogo oferece suporte a diversos idiomas, incluindo inglês, espanhol,
-        francês, alemão, italiano, português, entre outros. As opções de áudio e legendas
-        podem ser ajustadas nas configurações do jogo.
-
-      </p>
-    </Section>
+    <Gallery />
   </>
 )
 
