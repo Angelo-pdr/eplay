@@ -1,7 +1,7 @@
 import React from 'react'
 import Hero from '../../components/Hero'
 
-import diablo from '../../asserts/images/diablo.png'
+import resident from '../../asserts/images/resident.png'
 import Section from '../../components/Section'
 import Gallery from '../../components/Gallery'
 
@@ -32,7 +32,7 @@ const Product = () => (
 
       </p>
     </Section>
-    <Gallery />
+    <Gallery name='jogo teste' defaultCover={resident} />
   </>
 )
 
