@@ -9,6 +9,7 @@ type Props = {
   description: string
   infos: string[]
   image: string
+  id: number,
 }
 
 const Product = ({
@@ -17,9 +18,10 @@ const Product = ({
   description,
   image,
   infos,
-  system
+  system,
+  id
 }: Props) => (
-  <Card>
+  <Card to={`/product/${id}`}>
     <img src={image} alt={title} />
     <Infos>
       {infos.map((info) => (
