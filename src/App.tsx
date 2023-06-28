@@ -13,8 +13,8 @@ function App() {
     <Provider store={store}>
       <BrowserRouter>
         <GlobalCss />
-        <div className='container'>
-          <Header/>
+        <div className="container">
+          <Header />
         </div>
         <Rotas />
         <Footer />

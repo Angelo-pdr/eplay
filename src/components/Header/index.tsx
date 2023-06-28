@@ -7,17 +7,20 @@ import { Link } from 'react-router-dom'
 const Header = () => (
   <HeaderBar>
     <div>
-   <Link to='/'> <img src={logo} alt="EPLAY" /></Link>
+      <Link to="/">
+        {' '}
+        <img src={logo} alt="EPLAY" />
+      </Link>
       <nav>
         <Links>
           <LinkItem>
-          <Link to='/categories'>Categorias</Link>
+            <Link to="/categories">Categorias</Link>
           </LinkItem>
           <LinkItem>
-            <Link to='/'>Novidades</Link>
+            <Link to="/">Novidades</Link>
           </LinkItem>
           <LinkItem>
-            <Link to='/'>Promoções</Link>
+            <Link to="/">Promoções</Link>
           </LinkItem>
         </Links>
       </nav>

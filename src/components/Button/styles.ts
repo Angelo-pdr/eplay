@@ -5,8 +5,10 @@ import { Link } from 'react-router-dom'
 import { Props } from '.'
 
 export const ButtonContainer = styled.button<Props>`
-border: 2px solid ${props => props.variant === 'primary' ? cores.verde : cores.branca};
-  background-color: ${props => props.variant === 'primary' ? cores.verde : cores.verde} ;
+  border: 2px solid
+    ${(props) => (props.variant === 'primary' ? cores.verde : cores.branca)};
+  background-color: ${(props) =>
+    props.variant === 'primary' ? cores.verde : cores.verde};
   color: ${cores.branca};
   font-size: 1rem;
   font-weight: bold;

@@ -16,7 +16,7 @@ export const Imagem = styled.div`
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    z-index:1;
+    z-index: 1;
   }
 
   ${TagContainer} {

@@ -4,7 +4,6 @@ import Home from './pages/Home'
 import Categories from './pages/Categories'
 import Product from './pages/Product'
 
-
 const Rotas = () => (
   <Routes>
     <Route path="/" element={<Home />} />

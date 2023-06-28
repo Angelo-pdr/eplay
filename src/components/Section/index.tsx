@@ -1,5 +1,5 @@
-import React from "react"
-import { Container, Title } from "./styles"
+import React from 'react'
+import { Container, Title } from './styles'
 
 export type Props = {
   title: string

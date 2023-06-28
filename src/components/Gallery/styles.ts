@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { cores } from "../../styles";
+import styled from 'styled-components'
+import { cores } from '../../styles'
 
 export const Items = styled.ul`
   display: flex;
@@ -10,7 +10,7 @@ export const Item = styled.li`
   position: relative;
   > img {
     border: 2px solid ${cores.branca};
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     width: 150px;
     height: 150px;
     object-fit: cover;
@@ -29,11 +29,11 @@ export const Action = styled.div`
   justify-content: center;
   opacity: 0;
   cursor: pointer;
-  transition: opacity .5s ease;
+  transition: opacity 0.5s ease;
 
   &:hover {
     opacity: 1;
-    transition: opacity .5s ease;
+    transition: opacity 0.5s ease;
   }
 `
 export const Modal = styled.div`
@@ -66,13 +66,13 @@ export const ModalContent = styled.div`
   position: relative;
   z-index: 1;
 
-  header{
+  header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 24px;
 
-    h1{
+    h1 {
       font-size: 18px;
       font-weight: bold;
     }

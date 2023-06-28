@@ -9,9 +9,9 @@ type Props = {
   game: Game
 }
 
-const Hero = ({game}: Props) => (
-  <Banner style={{ backgroundImage: `url(${game.media.cover})`}}>
-    <div className='container'>
+const Hero = ({ game }: Props) => (
+  <Banner style={{ backgroundImage: `url(${game.media.cover})` }}>
+    <div className="container">
       <div>
         <Tag>{game.details.category}</Tag>
         <Tag>{game.details.system}</Tag>
@@ -21,16 +21,16 @@ const Hero = ({game}: Props) => (
         <p>
           {game.prices.discount && <span>{formataPreco(game.prices.old)}</span>}
           {game.prices.current && <> por {formataPreco(game.prices.current)}</>}
-
         </p>
-        {game.prices.current &&
-        <ButtonContainer
-          variant='primary'
-         type='button'
-         title='Clique aqui para adicionar este jogo ao carrinho' >
-          Adicionar ao carrinho
-        </ButtonContainer> }
-
+        {game.prices.current && (
+          <ButtonContainer
+            variant="primary"
+            type="button"
+            title="Clique aqui para adicionar este jogo ao carrinho"
+          >
+            Adicionar ao carrinho
+          </ButtonContainer>
+        )}
       </Infos>
     </div>
   </Banner>

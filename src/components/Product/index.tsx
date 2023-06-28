@@ -9,7 +9,7 @@ type Props = {
   description: string
   infos: string[]
   image: string
-  id: number,
+  id: number
 }
 
 const Product = ({

@@ -41,11 +41,11 @@ export const Infos = styled.div`
   background-color: ${cores.preta};
   max-width: 290px;
 
-  h2{
+  h2 {
     font-size: 32px;
   }
 
-  P{
+  P {
     margin: 16px 0px;
     font-size: 18px;
     span {
