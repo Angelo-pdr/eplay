@@ -21,8 +21,11 @@ const GlobalCss = createGlobalStyle`
     background-color: ${cores.preta};
     color: ${cores.branca};
     padding-top: 40px;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
   }
-  
+
   .container{
     max-width: 1024px;
     width: 100%;
