@@ -33,10 +33,10 @@ export const LinkItem = styled.div`
   margin-right: 1rem;
 `
 
-export const LinkICart = styled.a`
+export const CartButton = styled.a`
   display: flex;
   align-items: center;
-
+  cursor: pointer;
   img {
     margin-left: 1rem;
   }
