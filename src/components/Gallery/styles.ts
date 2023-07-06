@@ -3,10 +3,11 @@ import { cores } from '../../styles'
 
 export const Items = styled.ul`
   display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 `
 
 export const Item = styled.li`
-  margin-right: 1rem;
   position: relative;
   > img {
     border: 2px solid ${cores.branca};
