@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { cores } from '../../styles'
 import { TagContainer } from '../Tag/styles'
 import { ButtonContainer } from '../Button/styles'
-import fechar from "../../asserts/images/close.png"
+import fechar from '../../asserts/images/close.png'
 
 export const Overlay = styled.div`
   position: absolute;
@@ -24,7 +24,7 @@ export const CartContainer = styled.div`
   justify-content: flex-end;
   z-index: 1;
 
-  &.is-open{
+  &.is-open {
     display: flex;
   }
 `

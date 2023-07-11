@@ -1,32 +1,39 @@
 import React from 'react'
 import Button from '../Button'
-import { CartContainer, Overlay, Sidebar, Preco, Quatity, CartItem } from './styles'
+import {
+  CartContainer,
+  Overlay,
+  Sidebar,
+  Preco,
+  Quatity,
+  CartItem
+} from './styles'
 import Tag from '../Tag'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootReduce } from '../../store'
 import { close, remover } from '../../store/reduce/cart'
 import { formataPreco } from '../ProductsList'
 
-const Cart = () =>{
-  const {isOpen, items} = useSelector((state: RootReduce) => state.cart)
+const Cart = () => {
+  const { isOpen, items } = useSelector((state: RootReduce) => state.cart)
   const dispatch = useDispatch()
 
   const getTotalPrices = () => {
     return items.reduce((acumlador, valorAtual) => {
-     return (acumlador += valorAtual.prices.current!)
+      return (acumlador += valorAtual.prices.current!)
     }, 0)
   }
 
-  const closeCart  = () => {
+  const closeCart = () => {
     dispatch(close())
   }
 
   const removeItem = (id: number) => {
-     dispatch(remover(id))
+    dispatch(remover(id))
   }
 
   return (
-    <CartContainer className={isOpen ? 'is-open': ''}>
+    <CartContainer className={isOpen ? 'is-open' : ''}>
       <Overlay onClick={closeCart} />
       <Sidebar>
         <ul>
@@ -39,7 +46,7 @@ const Cart = () =>{
                 <Tag>{item.details.system}</Tag>
                 <span>{formataPreco(item.prices.current)}</span>
               </div>
-              <button type='button' onClick={ () => removeItem(item.id) } />
+              <button type="button" onClick={() => removeItem(item.id)} />
             </CartItem>
           ))}
         </ul>

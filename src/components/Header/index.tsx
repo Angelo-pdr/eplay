@@ -8,9 +8,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { RootReduce } from '../../store'
 
 const Header = () => {
-  const {items} = useSelector((state: RootReduce) => state.cart)
+  const { items } = useSelector((state: RootReduce) => state.cart)
   const dispatch = useDispatch()
-  const openCart  = () => {
+  const openCart = () => {
     dispatch(open())
   }
   return (

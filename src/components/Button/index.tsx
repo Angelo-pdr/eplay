@@ -10,7 +10,7 @@ export type Props = {
   variant?: 'primary' | 'secondary'
 }
 
-const Tag = ({
+const Button = ({
   type,
   title,
   to,
@@ -37,4 +37,4 @@ const Tag = ({
   )
 }
 
-export default Tag
+export default Button

@@ -5,7 +5,7 @@ import { ButtonContainer } from '../Button/styles'
 import { Game } from '../../pages/Home'
 import { formataPreco } from '../ProductsList'
 import { useDispatch } from 'react-redux'
-import { add, open } from "../../store/reduce/cart"
+import { add, open } from '../../store/reduce/cart'
 
 type Props = {
   game: Game
@@ -19,7 +19,7 @@ const Hero = ({ game }: Props) => {
     dispatch(open())
   }
 
-  return(
+  return (
     <Banner style={{ backgroundImage: `url(${game.media.cover})` }}>
       <div className="container">
         <div>
@@ -29,11 +29,16 @@ const Hero = ({ game }: Props) => {
         <Infos>
           <h2>{game.name}</h2>
           <p>
-            {game.prices.discount && <span>{formataPreco(game.prices.old)}</span>}
-            {game.prices.current && <> por {formataPreco(game.prices.current)}</>}
+            {game.prices.discount && (
+              <span>{formataPreco(game.prices.old)}</span>
+            )}
+            {game.prices.current && (
+              <> por {formataPreco(game.prices.current)}</>
+            )}
           </p>
           {game.prices.current && (
-            <ButtonContainer style={{cursor: 'pointer'}}
+            <ButtonContainer
+              style={{ cursor: 'pointer' }}
               onClick={addToCart}
               variant="primary"
               type="button"
