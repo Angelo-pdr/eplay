@@ -27,7 +27,8 @@ export const InpuitGroup = styled.div<InpuitGroupProps>`
     display: block;
   }
 
-  input, select{
+  input,
+  select {
     background-color: ${cores.branca};
     height: 32px;
     width: 100%;
@@ -41,7 +42,7 @@ export const TabButton = styled.button<TagProps>`
   font-size: 14px;
   font-weight: bold;
   color: ${cores.branca};
-  background-color: ${props => props.isActive ? cores.verde : cores.preta};
+  background-color: ${(props) => (props.isActive ? cores.verde : cores.preta)};
   border: none;
   height: 32px;
   margin-right: 16px;
