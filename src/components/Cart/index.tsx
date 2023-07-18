@@ -1,5 +1,12 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+
 import Button from '../Button'
+import Tag from '../Tag'
+
+import { formataPreco } from '../ProductsList'
+import { close, remover } from '../../store/reduce/cart'
+import { RootReduce } from '../../store'
 import {
   CartContainer,
   Overlay,
@@ -8,16 +15,10 @@ import {
   Quatity,
   CartItem
 } from './styles'
-import Tag from '../Tag'
-import { useDispatch, useSelector } from 'react-redux'
-import { RootReduce } from '../../store'
-import { close, remover } from '../../store/reduce/cart'
-import { formataPreco } from '../ProductsList'
 
 const Cart = () => {
   const { isOpen, items } = useSelector((state: RootReduce) => state.cart)
   const dispatch = useDispatch()
-
   const getTotalPrices = () => {
     return items.reduce((acumlador, valorAtual) => {
       return (acumlador += valorAtual.prices.current!)

@@ -22,7 +22,6 @@ export const HeaderBar = styled.header`
     text-decoration: none;
     font-weight: bold;
   }
-
 `
 
 export const HeaderRow = styled.div`
@@ -59,7 +58,7 @@ export const LinkItem = styled.div`
       display: block;
       padding: 16px 0;
       text-align: center;
-     }
+    }
   }
 `
 

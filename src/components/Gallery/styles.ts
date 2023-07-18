@@ -29,7 +29,7 @@ export const Action = styled.div`
   align-items: center;
   justify-content: center;
   opacity: 0;
-  cursor: pointer;
+  cursor: zoom-in;
   transition: opacity 0.5s ease;
 
   &:hover {

@@ -1,12 +1,12 @@
 import React from 'react'
-import { Imagem, Titulo, Precos } from './styles'
 import Tag from '../Tag'
 import Button from '../Button'
 import { formataPreco } from '../ProductsList'
 import { useGetFeatureGameQuery } from '../../services/api'
 
+import { Imagem, Titulo, Precos } from './styles'
 const Banner = () => {
-  const { data: game, isLoading } = useGetFeatureGameQuery()
+  const { data: game } = useGetFeatureGameQuery()
 
   if (!game) {
     return <h1>Carregando...</h1>

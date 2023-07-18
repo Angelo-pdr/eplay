@@ -1,11 +1,22 @@
 import React, { useState } from 'react'
-import { HeaderBar, LinkItem, Links, CartButton, Hamburguer, HeaderRow, NavMobile } from './styles'
+import { useDispatch, useSelector } from 'react-redux'
+import { HashLink } from 'react-router-hash-link'
+
 import logo from '../../asserts/images/logo.svg'
 import carrinho from '../../asserts/images/carrinho.svg'
-import { Link } from 'react-router-dom'
+
 import { open } from '../../store/reduce/cart'
-import { useDispatch, useSelector } from 'react-redux'
 import { RootReduce } from '../../store'
+
+import {
+  HeaderBar,
+  LinkItem,
+  Links,
+  CartButton,
+  Hamburguer,
+  HeaderRow,
+  NavMobile
+} from './styles'
 
 const Header = () => {
   const { items } = useSelector((state: RootReduce) => state.cart)
@@ -23,19 +34,34 @@ const Header = () => {
             <span />
             <span />
           </Hamburguer>
-          <Link to="/">
+          <HashLink to="/">
             <img src={logo} alt="EPLAY" />
-          </Link>
+          </HashLink>
           <nav className={isMenuOpen ? 'is-open' : ''}>
             <Links>
               <LinkItem>
-                <Link to="/categories">Categorias</Link>
+                <HashLink
+                  title="Clique aqui para acessar seção de categorias"
+                  to="/categories"
+                >
+                  Categorias
+                </HashLink>
               </LinkItem>
               <LinkItem>
-                <Link to="/">Novidades</Link>
+                <HashLink
+                  title="Clique aqui para acessar seção de novidades"
+                  to="/"
+                >
+                  Novidades
+                </HashLink>
               </LinkItem>
               <LinkItem>
-                <Link to="/">Promoções</Link>
+                <HashLink
+                  title="Clique aqui para acessar seção de promoções"
+                  to="/"
+                >
+                  Promoções
+                </HashLink>
               </LinkItem>
             </Links>
           </nav>
@@ -46,17 +72,35 @@ const Header = () => {
         </CartButton>
       </HeaderRow>
       <NavMobile className={isMenuOpen ? 'is-open' : ''}>
-            <Links>
-              <LinkItem>
-                <Link to="/categories">Categorias</Link>
-              </LinkItem>
-              <LinkItem>
-                <Link to="/">Novidades</Link>
-              </LinkItem>
-              <LinkItem>
-                <Link to="/">Promoções</Link>
-              </LinkItem>
-            </Links>
+        <Links>
+          <LinkItem>
+            <HashLink
+              title="Clique aqui para acessar seção de categorias"
+              to="/categories"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Categorias
+            </HashLink>
+          </LinkItem>
+          <LinkItem>
+            <HashLink
+              title="Clique aqui para acessar seção de novidades"
+              to="/"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Novidades
+            </HashLink>
+          </LinkItem>
+          <LinkItem>
+            <HashLink
+              title="Clique aqui para acessar seção de promoções"
+              to="/"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Promoções
+            </HashLink>
+          </LinkItem>
+        </Links>
       </NavMobile>
     </HeaderBar>
   )

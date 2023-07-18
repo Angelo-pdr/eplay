@@ -16,6 +16,7 @@ export const ButtonContainer = styled.button<Props>`
   borde-radius: 8px;
   display: inline-block;
   border-radius: 8px;
+  cursor: pointer;
 `
 export const ButtonLink = styled(Link)`
   border: 2px solid ${cores.branca};

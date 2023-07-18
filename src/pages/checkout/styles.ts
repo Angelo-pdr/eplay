@@ -52,3 +52,16 @@ export const TabButton = styled.button<TagProps>`
     margin-right: 8px;
   }
 `
+
+export const Button = styled.button`
+  border: 2px solid ${cores.verde};
+  background-color: ${cores.verde};
+  color: ${cores.branca};
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 8px 16px;
+  borde-radius: 8px;
+  display: inline-block;
+  border-radius: 8px;
+  cursor: pointer;
+`

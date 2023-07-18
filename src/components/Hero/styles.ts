@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { TagContainer } from '../Tag/styles'
-import { breakpoints, cores } from '../../styles'
+import { cores } from '../../styles'
 
 export const Banner = styled.div`
   width: 100%;
