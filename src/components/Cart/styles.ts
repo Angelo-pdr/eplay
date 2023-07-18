@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 import { TagContainer } from '../Tag/styles'
 import { ButtonContainer } from '../Button/styles'
 import fechar from '../../asserts/images/close.png'
@@ -30,7 +30,7 @@ export const CartContainer = styled.div`
 `
 
 export const Sidebar = styled.aside`
-  background-color: ${cores.cinza};
+  background-color: ${colors.gray};
   z-index: 1;
   padding: 40px 16px 0px 16px;
   max-width: 360px;
@@ -42,29 +42,29 @@ export const Sidebar = styled.aside`
   }
 `
 
-export const Preco = styled.p`
+export const Prices = styled.p`
   font-weight: bold;
   font-size: 14px;
-  color: ${cores.branca};
+  color: ${colors.black};
   margin-bottom: 24px;
 
   span {
     display: block;
     font-size: 14px;
-    color: ${cores.cinzaClaro};
+    color: ${colors.lightgray};
   }
 `
 
 export const Quatity = styled.p`
   font-weight: bold;
   font-size: 14px;
-  color: ${cores.branca};
+  color: ${colors.white};
   margin: 24px 0px;
 `
 
 export const CartItem = styled.div`
   display: flex;
-  border-bottom: 1px solid ${cores.cinzaClaro};
+  border-bottom: 1px solid ${colors.lightgray};
   padding: 8px 0;
   position: relative;
 
@@ -76,7 +76,7 @@ export const CartItem = styled.div`
   }
 
   h3 {
-    color: ${cores.branca};
+    color: ${colors.white};
     font-weight: bold;
     font-size: 16px;
   }
@@ -85,7 +85,7 @@ export const CartItem = styled.div`
     display: block;
     font-weight: bold;
     font-size: 14px;
-    color: ${cores.branca};
+    color: ${colors.white};
   }
 
   ${TagContainer} {

@@ -1,11 +1,11 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 import { Props } from '.'
 
 export const Container = styled.section<Omit<Props, 'title' | 'games'>>`
   padding: 32px 0px;
   background-color: ${(props) =>
-    props.background === 'black' ? cores.preta : cores.cinza};
+    props.background === 'black' ? colors.black : colors.gray};
 
   p {
     font-size: 14px;

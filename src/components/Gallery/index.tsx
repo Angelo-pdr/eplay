@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 
-import { Items, Item, Action, Modal, ModalContent } from './styles'
+
+import Section from '../../components/Section'
 import { GalleryItem } from '../../pages/Home'
 
 import play from '../../asserts/images/botao-play.png'
-import fechar from '../../asserts/images/close.png'
+import closeIcon from '../../asserts/images/close.png'
 import zoom from '../../asserts/images/mais-zoom.png'
-import Section from '../../components/Section'
+
+import * as S from './styles'
 
 type Props = {
   defaultCover: string
@@ -46,9 +48,9 @@ const Gallery = ({ defaultCover, name, items }: Props) => {
   return (
     <>
       <Section title="Galeria" background="black">
-        <Items>
+        <S.Items>
           {items.map((media, index) => (
-            <Item
+            <S.Item
               key={media.url}
               onClick={() => {
                 setModal({
@@ -62,24 +64,24 @@ const Gallery = ({ defaultCover, name, items }: Props) => {
                 src={getMediaCover(media)}
                 alt={`Mídia${index + 1} de ${name}`}
               />
-              <Action>
+              <S.Action>
                 <img
                   src={getMediaIcon(media)}
                   alt="clique aqui para maximar a mídia"
                 />
-              </Action>
-            </Item>
+              </S.Action>
+            </S.Item>
           ))}
-        </Items>
+        </S.Items>
       </Section>
-      <Modal className={modal.visivel ? 'visivel' : ''}>
-        <ModalContent>
+      <S.Modal className={modal.visivel ? 'is-visible' : ''}>
+        <S.ModalContent>
           <header>
             <h4>{name}</h4>
             <img
-              src={fechar}
+              src={closeIcon}
               alt="Ícone de fechar"
-              onClick={() => closeModal()}
+              onClick={closeModal}
             />
           </header>
           {modal.type == 'image' ? (
@@ -87,9 +89,9 @@ const Gallery = ({ defaultCover, name, items }: Props) => {
           ) : (
             <iframe frameBorder={0} src={modal.url} />
           )}
-        </ModalContent>
+        </S.ModalContent>
         <div className="overlay" onClick={() => closeModal()}></div>
-      </Modal>
+      </S.Modal>
     </>
   )
 }

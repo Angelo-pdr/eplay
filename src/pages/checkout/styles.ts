@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 
 type InpuitGroupProps = {
   maxWidth?: string
@@ -29,11 +29,11 @@ export const InpuitGroup = styled.div<InpuitGroupProps>`
 
   input,
   select {
-    background-color: ${cores.branca};
+    background-color: ${colors.white};
     height: 32px;
     width: 100%;
     padding: 0px 8px;
-    border: 1px solid ${cores.branca};
+    border: 1px solid ${colors.white};
   }
 `
 
@@ -41,8 +41,8 @@ export const TabButton = styled.button<TagProps>`
   border-radius: 8px;
   font-size: 14px;
   font-weight: bold;
-  color: ${cores.branca};
-  background-color: ${(props) => (props.isActive ? cores.verde : cores.preta)};
+  color: ${colors.white};
+  background-color: ${(props) => (props.isActive ? colors.green : colors.black)};
   border: none;
   height: 32px;
   margin-right: 16px;
@@ -54,9 +54,9 @@ export const TabButton = styled.button<TagProps>`
 `
 
 export const Button = styled.button`
-  border: 2px solid ${cores.verde};
-  background-color: ${cores.verde};
-  color: ${cores.branca};
+  border: 2px solid ${colors.green};
+  background-color: ${colors.green};
+  color: ${colors.white};
   font-size: 1rem;
   font-weight: bold;
   padding: 8px 16px;

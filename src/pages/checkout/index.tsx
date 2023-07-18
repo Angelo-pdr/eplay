@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
-import Card from '../../components/Card'
-import { InpuitGroup, Row, TabButton, Button } from './styles'
-import boleto from '../../asserts/images/barcode.png'
-import cartao from '../../asserts/images/credit-card.png'
 import * as Yup from 'yup'
 import { useFormik } from 'formik'
+
+import Card from '../../components/Card'
+
+import barCode from '../../asserts/images/barcode.png'
+import creditCard from '../../asserts/images/credit-card.png'
+
 import { usePurchaseMutation } from '../../services/api'
+import * as S from './styles'
 
 const Checkout = () => {
   const [payWithCard, setPayWithCard] = useState(false)
@@ -170,8 +173,8 @@ const Checkout = () => {
         <form onSubmit={form.handleSubmit}>
           <Card title="Dados de cobrança">
             <>
-              <Row>
-                <InpuitGroup>
+              <S.Row>
+                <S.InpuitGroup>
                   <label htmlFor="fullname">Nome completo</label>
                   <input
                     type="text"
@@ -184,8 +187,8 @@ const Checkout = () => {
                   <small>
                     {getErrorMessage('fullname', form.errors.fullname)}
                   </small>
-                </InpuitGroup>
-                <InpuitGroup>
+                </S.InpuitGroup>
+                <S.InpuitGroup>
                   <label htmlFor="email">E-mail</label>
                   <input
                     type="text"
@@ -196,8 +199,8 @@ const Checkout = () => {
                     onBlur={form.handleBlur}
                   />
                   <small>{getErrorMessage('email', form.errors.email)}</small>
-                </InpuitGroup>
-                <InpuitGroup>
+                </S.InpuitGroup>
+                <S.InpuitGroup>
                   <label htmlFor="cpf">CPF</label>
                   <input
                     type="text"
@@ -208,13 +211,13 @@ const Checkout = () => {
                     onBlur={form.handleBlur}
                   />
                   <small>{getErrorMessage('cpf', form.errors.cpf)}</small>
-                </InpuitGroup>
-              </Row>
+                </S.InpuitGroup>
+              </S.Row>
               <h3 className="margin-top">
                 Dados de entrega - conteúdo digital
               </h3>
-              <Row>
-                <InpuitGroup maxWidth="284px">
+              <S.Row>
+                <S.InpuitGroup maxWidth="284px">
                   <label htmlFor="deliveryEmail">E-mail</label>
                   <input
                     type="text"
@@ -230,8 +233,8 @@ const Checkout = () => {
                       form.errors.deliveryEmail
                     )}
                   </small>
-                </InpuitGroup>
-                <InpuitGroup maxWidth="284px">
+                </S.InpuitGroup>
+                <S.InpuitGroup maxWidth="284px">
                   <label htmlFor="confirmDeliveryEmail">
                     Confirme o e-mail
                   </label>
@@ -249,33 +252,33 @@ const Checkout = () => {
                       form.errors.confirmDeliveryEmail
                     )}
                   </small>
-                </InpuitGroup>
-              </Row>
+                </S.InpuitGroup>
+              </S.Row>
             </>
           </Card>
           <Card title="Pagamento">
             <>
-              <TabButton
+              <S.TabButton
                 isActive={!payWithCard}
                 onClick={() => setPayWithCard(false)}
                 type="button"
               >
-                <img src={boleto} alt="Boleto" />
+                <img src={barCode} alt="Boleto" />
                 Boleto bancário
-              </TabButton>
-              <TabButton
+              </S.TabButton>
+              <S.TabButton
                 isActive={payWithCard}
                 onClick={() => setPayWithCard(true)}
                 type="button"
               >
-                <img src={cartao} alt="Cartão" />
+                <img src={creditCard} alt="Cartão" />
                 Cartão de crédito
-              </TabButton>
+              </S.TabButton>
               <div className="margin-top">
                 {payWithCard ? (
                   <>
-                    <Row>
-                      <InpuitGroup>
+                    <S.Row>
+                      <S.InpuitGroup>
                         <label htmlFor="cardOwner">
                           Nome do titular do cartão
                         </label>
@@ -290,8 +293,8 @@ const Checkout = () => {
                         <small>
                           {getErrorMessage('cardOwner', form.errors.cardOwner)}
                         </small>
-                      </InpuitGroup>
-                      <InpuitGroup>
+                      </S.InpuitGroup>
+                      <S.InpuitGroup>
                         <label htmlFor="cpfCardOwner">
                           CPF do titular do cartão
                         </label>
@@ -309,10 +312,10 @@ const Checkout = () => {
                             form.errors.cpfCardOwner
                           )}
                         </small>
-                      </InpuitGroup>
-                    </Row>
-                    <Row marginTop="24px">
-                      <InpuitGroup>
+                      </S.InpuitGroup>
+                    </S.Row>
+                    <S.Row marginTop="24px">
+                      <S.InpuitGroup>
                         <label htmlFor="cardDisplayName">Nome no cartão</label>
                         <input
                           type="text"
@@ -328,8 +331,8 @@ const Checkout = () => {
                             form.errors.cardDisplayName
                           )}
                         </small>
-                      </InpuitGroup>
-                      <InpuitGroup>
+                      </S.InpuitGroup>
+                      <S.InpuitGroup>
                         <label htmlFor="cardNumber">Número do cartão</label>
                         <input
                           type="text"
@@ -345,8 +348,8 @@ const Checkout = () => {
                             form.errors.cardNumber
                           )}
                         </small>
-                      </InpuitGroup>
-                      <InpuitGroup maxWidth="123px">
+                      </S.InpuitGroup>
+                      <S.InpuitGroup maxWidth="123px">
                         <label htmlFor="expiresMoth">Mês do vencimento</label>
                         <input
                           type="text"
@@ -362,8 +365,8 @@ const Checkout = () => {
                             form.errors.expiresMoth
                           )}
                         </small>
-                      </InpuitGroup>
-                      <InpuitGroup maxWidth="123px">
+                      </S.InpuitGroup>
+                      <S.InpuitGroup maxWidth="123px">
                         <label htmlFor="expiresYear">Ano de vencimento</label>
                         <input
                           type="text"
@@ -379,8 +382,8 @@ const Checkout = () => {
                             form.errors.expiresYear
                           )}
                         </small>
-                      </InpuitGroup>
-                      <InpuitGroup maxWidth="48px">
+                      </S.InpuitGroup>
+                      <S.InpuitGroup maxWidth="48px">
                         <label htmlFor="cardCode">CVV</label>
                         <input
                           type="text"
@@ -393,10 +396,10 @@ const Checkout = () => {
                         <small>
                           {getErrorMessage('cardCode', form.errors.cardCode)}
                         </small>
-                      </InpuitGroup>
-                    </Row>
-                    <Row marginTop="24px">
-                      <InpuitGroup maxWidth="150px">
+                      </S.InpuitGroup>
+                    </S.Row>
+                    <S.Row marginTop="24px">
+                      <S.InpuitGroup maxWidth="150px">
                         <label htmlFor="installments">Parcelamento</label>
                         <select
                           id="installments"
@@ -415,8 +418,8 @@ const Checkout = () => {
                             form.errors.installments
                           )}
                         </small>
-                      </InpuitGroup>
-                    </Row>
+                      </S.InpuitGroup>
+                    </S.Row>
                   </>
                 ) : (
                   <p>
@@ -431,9 +434,9 @@ const Checkout = () => {
               </div>
             </>
           </Card>
-          <Button type="submit" title="Cliquei aqui para finaliza a compra">
+          <S.Button type="submit" title="Cliquei aqui para finaliza a compra">
             Finalizar compra
-          </Button>
+          </S.Button>
         </form>
       )}
     </div>
