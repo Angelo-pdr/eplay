@@ -33,12 +33,8 @@ export type Game = {
 }
 
 const Home = () => {
-  const { data: onSaleGames } = useGetOnSaleQuery()
-  const { data: soonGame } = useGetSoonQuery()
-
-  if (!onSaleGames || !soonGame) {
-    return <h1>Carregando...</h1>
-  }
+  const { data: onSaleGames, isLoading: isLoadingSales } = useGetOnSaleQuery()
+  const { data: soonGame, isLoading: isLoadingSoon } = useGetSoonQuery()
 
   return (
     <>
@@ -48,12 +44,14 @@ const Home = () => {
         background="gray"
         games={onSaleGames}
         id="on-sales"
+        isLoading={isLoadingSales}
       />
       <ProductList
         title="Em breve"
         background="black"
         games={soonGame}
         id="coming-soon"
+        isLoading={isLoadingSoon}
       />
     </>
   )

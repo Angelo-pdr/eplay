@@ -1,15 +1,17 @@
 import React from 'react'
 import Tag from '../Tag'
 import Button from '../Button'
-import { parseToBrl } from '../../utils'
+import Loader from '../Loader'
+
 import { useGetFeatureGameQuery } from '../../services/api'
 
+import { parseToBrl } from '../../utils'
 import * as S from './styles'
 const Banner = () => {
   const { data: game } = useGetFeatureGameQuery()
 
   if (!game) {
-    return <h1>Carregando...</h1>
+    return <Loader />
   }
 
   return (
