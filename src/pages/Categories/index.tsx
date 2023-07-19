@@ -7,7 +7,6 @@ import {
   useGetSimulationGamesQuery,
   useGetSportGamesQuery
 } from '../../services/api'
-import Loader from '../../components/Loader'
 
 const Categories = () => {
   const { data: actionGame, isLoading: isLoadingAction } =

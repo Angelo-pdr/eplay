@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 type InpuitGroupProps = {
   maxWidth?: string
@@ -16,6 +16,11 @@ export const Row = styled.div<RowProps>`
   column-gap: 24px;
   margin-top: ${(props) => props.marginTop || '0'};
   align-items: flex-end;
+
+  @media(max-width: ${breakpoints.tablet}) {
+    display: block;
+    margin-top: 1rem;
+  }
 `
 
 export const InpuitGroup = styled.div<InpuitGroupProps>`
@@ -39,6 +44,10 @@ export const InpuitGroup = styled.div<InpuitGroupProps>`
       border: 1px solid red;
     }
   }
+
+  @media(max-width: ${breakpoints.tablet}) {
+    margin-top: 1rem;
+  }
 `
 
 export const TabButton = styled.button<TagProps>`
@@ -53,8 +62,14 @@ export const TabButton = styled.button<TagProps>`
   margin-right: 16px;
   padding: 0px 8px;
   cursor: pointer;
+
   img {
     margin-right: 8px;
+  }
+
+  @media(max-width: ${breakpoints.tablet}) {
+    margin-top: .5rem;
+    width: 100%;
   }
 `
 

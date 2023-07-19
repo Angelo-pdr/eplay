@@ -1,7 +1,6 @@
 import React from 'react'
 import Product from '../Product'
 import * as S from './styles'
-import { Game } from '../../pages/Home'
 import { parseToBrl } from '../../utils'
 import Loader from '../Loader'
 
