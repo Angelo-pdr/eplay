@@ -34,6 +34,10 @@ export const InpuitGroup = styled.div<InpuitGroupProps>`
     width: 100%;
     padding: 0px 8px;
     border: 1px solid ${colors.white};
+
+    &.error {
+      border: 1px solid red;
+    }
   }
 `
 
@@ -42,7 +46,8 @@ export const TabButton = styled.button<TagProps>`
   font-size: 14px;
   font-weight: bold;
   color: ${colors.white};
-  background-color: ${(props) => (props.isActive ? colors.green : colors.black)};
+  background-color: ${(props) =>
+    props.isActive ? colors.green : colors.black};
   border: none;
   height: 32px;
   margin-right: 16px;

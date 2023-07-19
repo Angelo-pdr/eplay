@@ -21,7 +21,10 @@ const Product = ({
   system,
   id
 }: Props) => (
-  <S.Card title={`Clique aqui para ver mais detalhes do jogo: ${title}`} to={`/product/${id}`}>
+  <S.Card
+    title={`Clique aqui para ver mais detalhes do jogo: ${title}`}
+    to={`/product/${id}`}
+  >
     <img src={image} alt={title} />
     <S.Infos>
       {infos.map((info) => (

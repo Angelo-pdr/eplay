@@ -8,7 +8,7 @@ export const ButtonContainer = styled.button<Props>`
   border: 2px solid
     ${(props) => (props.variant === 'primary' ? colors.green : colors.black)};
   background-color: ${(props) =>
-    props.variant === 'primary' ? colors.black : colors.green};
+    props.variant === 'primary' ? colors.green : colors.black};
   color: ${colors.white};
   font-size: 1rem;
   font-weight: bold;

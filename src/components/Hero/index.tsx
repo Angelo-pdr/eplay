@@ -29,12 +29,8 @@ const Hero = ({ game }: Props) => {
         <S.Infos>
           <h2>{game.name}</h2>
           <p>
-            {game.prices.discount && (
-              <span>{parseToBrl(game.prices.old)}</span>
-            )}
-            {game.prices.current && (
-              <> por {parseToBrl(game.prices.current)}</>
-            )}
+            {game.prices.discount && <span>{parseToBrl(game.prices.old)}</span>}
+            {game.prices.current && <> por {parseToBrl(game.prices.current)}</>}
           </p>
           {game.prices.current && (
             <ButtonContainer

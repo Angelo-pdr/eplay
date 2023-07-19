@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 
-
 import Section from '../../components/Section'
 import { GalleryItem } from '../../pages/Home'
 
@@ -78,11 +77,7 @@ const Gallery = ({ defaultCover, name, items }: Props) => {
         <S.ModalContent>
           <header>
             <h4>{name}</h4>
-            <img
-              src={closeIcon}
-              alt="Ícone de fechar"
-              onClick={closeModal}
-            />
+            <img src={closeIcon} alt="Ícone de fechar" onClick={closeModal} />
           </header>
           {modal.type == 'image' ? (
             <img src={modal.url} alt="" />

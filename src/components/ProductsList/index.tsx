@@ -11,7 +11,6 @@ export type Props = {
   id?: string
 }
 
-
 const ProductList = ({ background, title, games, id }: Props) => {
   const getGameTags = (game: Game) => {
     const tags = []
